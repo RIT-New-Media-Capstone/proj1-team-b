@@ -10,21 +10,15 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     public InputField createInput;
     public InputField joinInput;
 
-    public void CreateRoom()
+    public void CreateAndJoinRoom()
     {
-        PhotonNetwork.CreateRoom(createInput.text);
-
-
-    }
-
-    public void JoinRoom()
-    {
-        PhotonNetwork.JoinRoom(joinInput.text);
+        PhotonNetwork.CreateRoom("private_room");
+        PhotonNetwork.JoinRoom("private_room");
     }
 
     public override void OnJoinedRoom()
     {
         //add whatever name of scene is the actual game/multiplayer scene
-        PhotonNetwork.LoadLevel("Game");
+        PhotonNetwork.LoadLevel("MainGameScene");
     }
 }
