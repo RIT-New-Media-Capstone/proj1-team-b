@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using UnityEngine.SceneManagement;
 
-public class serverConnect : MonoBehaviourPunCallbacks
+public class ServerConnect : MonoBehaviourPunCallbacks
 {
     // Start is called before the first frame update
     void Start()
