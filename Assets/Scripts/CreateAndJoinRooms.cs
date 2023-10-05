@@ -3,22 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
+
 
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
 
-    public InputField createInput;
-    public InputField joinInput;
+    public Button startNew;
+    public Button joinCurrent;
 
-    public void CreateAndJoinRoom()
+    public void Awake()
+    {
+        SceneManager.LoadScene("Lobby");
+        Debug.Log("Scene Loaded.");
+    }
+
+    public void CreateRoom()
     {
         PhotonNetwork.CreateRoom("private_room");
+        Debug.Log("room created");
+    }
+
+    public void JoinRoom()
+    {
         PhotonNetwork.JoinRoom("private_room");
+        Debug.Log("room joined");
     }
 
     public override void OnJoinedRoom()
     {
         //add whatever name of scene is the actual game/multiplayer scene
-        PhotonNetwork.LoadLevel("MainGameScene");
+        PhotonNetwork.LoadLevel("SampleScene");
     }
 }

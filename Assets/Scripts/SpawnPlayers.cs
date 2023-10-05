@@ -16,7 +16,7 @@ public class SpawnPlayers : MonoBehaviour
     void Start()
     {
         Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-        PhotonNetwork.Instantiate(playerPrefab.name, randomPosition, Quaternion.identity);
+        //PhotonNetwork.Instantiate(playerPrefab.name, randomPosition, Quaternion.identity);
     }
 
     // Update is called once per frame

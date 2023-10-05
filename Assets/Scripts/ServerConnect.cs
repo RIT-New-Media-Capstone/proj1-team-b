@@ -7,10 +7,13 @@ using UnityEngine.SceneManagement;
 public class ServerConnect : MonoBehaviourPunCallbacks
 {
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
+        //SceneManager.LoadScene("ConnectServer");
         PhotonNetwork.ConnectUsingSettings();
-        
+        Debug.Log("ConnectUsingSettings");
+
+
     }
 
     // Update is called once per frame
@@ -22,6 +25,8 @@ public class ServerConnect : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         PhotonNetwork.JoinLobby();
+        Debug.Log("lobby joined");
+
     }
 
     public override void OnJoinedLobby()
