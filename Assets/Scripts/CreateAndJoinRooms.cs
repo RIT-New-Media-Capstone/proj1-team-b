@@ -11,12 +11,14 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public Button startNew;
     public Button joinCurrent;
+    public InputField newRoomName;
+    public InputField joinRoomName;
 
-    public void Awake()
-    {
-        SceneManager.LoadScene("Lobby");
-        Debug.Log("Scene Loaded.");
-    }
+    //public void Awake()
+    //{
+    //    SceneManager.LoadScene("Lobby");
+    //    Debug.Log("Scene Loaded.");
+    //}
 
     public void CreateRoom()
     {
