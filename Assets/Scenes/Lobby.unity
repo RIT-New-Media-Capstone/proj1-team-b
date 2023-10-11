@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 194921670}
   - component: {fileID: 194921669}
   m_Layer: 5
-  m_Name: JoinRoomName
+  m_Name: joinRoomName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -545,9 +545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-'
+  m_text: join room
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -655,8 +653,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startNew: {fileID: 2131414471}
   joinCurrent: {fileID: 1373864931}
-  newRoomName: {fileID: 0}
-  joinRoomName: {fileID: 0}
+  newRoomName: {fileID: 194921669}
+  joinRoomName: {fileID: 1423103033}
 --- !u!4 &609005935
 Transform:
   m_ObjectHideFlags: 0
@@ -1288,9 +1286,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 01e754da66135439ba40ed7dc7915e12, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 609005934}
+        m_TargetAssemblyTypeName: CreateAndJoinRooms, Assembly-CSharp
+        m_MethodName: JoinRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1351,7 +1349,7 @@ GameObject:
   - component: {fileID: 1423103034}
   - component: {fileID: 1423103033}
   m_Layer: 5
-  m_Name: CreateRoomName
+  m_Name: newRoomName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1957,9 +1955,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 01e754da66135439ba40ed7dc7915e12, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 609005934}
+        m_TargetAssemblyTypeName: CreateAndJoinRooms, Assembly-CSharp
+        m_MethodName: CreateRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

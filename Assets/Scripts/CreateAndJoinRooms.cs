@@ -4,32 +4,38 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
 
     public Button startNew;
     public Button joinCurrent;
-    public InputField newRoomName;
-    public InputField joinRoomName;
+    public TMP_InputField newRoomName;
+    public TMP_InputField joinRoomName;
 
     //public void Awake()
     //{
     //    SceneManager.LoadScene("Lobby");
     //    Debug.Log("Scene Loaded.");
     //}
+    public void Start()
+    {
+        //newRoomName = GameObject.Find("newRoomName").GetComponent<InputField>();
+        //joinRoomName = GameObject.Find("joinRoomName").GetComponent<InputField>();
+        Debug.Log(newRoomName, joinRoomName);
+    }
 
     public void CreateRoom()
     {
-        PhotonNetwork.CreateRoom("private_room");
-        Debug.Log("room created");
+        PhotonNetwork.CreateRoom(newRoomName.ToString());
+        Debug.Log("newRoomName: " + newRoomName.ToString());
     }
 
     public void JoinRoom()
     {
-        PhotonNetwork.JoinRoom("private_room");
-        Debug.Log("room joined");
+        PhotonNetwork.JoinRoom(joinRoomName.ToString());
+        Debug.Log("joinRoomName: " + joinRoomName.ToString());
     }
 
     public override void OnJoinedRoom()
