@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circlePrefab: {fileID: 2288319320568630117, guid: 8f27fd326d4ec384680a7792df593567, type: 3}
   drawnCircles: []
+  otherPlayerCircles: []
   mousePosition: {x: 0, y: 0}
 --- !u!114 &1220541807078507989
 MonoBehaviour:
