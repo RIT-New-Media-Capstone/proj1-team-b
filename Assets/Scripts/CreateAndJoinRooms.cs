@@ -28,14 +28,14 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public void CreateRoom()
     {
-        PhotonNetwork.CreateRoom(newRoomName.ToString());
-        Debug.Log("newRoomName: " + newRoomName.ToString());
+        PhotonNetwork.CreateRoom(newRoomName.text);
+        Debug.Log("newRoomName: " + newRoomName.text);
     }
 
     public void JoinRoom()
     {
-        PhotonNetwork.JoinRoom(joinRoomName.ToString());
-        Debug.Log("joinRoomName: " + joinRoomName.ToString());
+        PhotonNetwork.JoinRoom(joinRoomName.text);
+        Debug.Log("joinRoomName: " + joinRoomName.text);
     }
 
     public override void OnJoinedRoom()
